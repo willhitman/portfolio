@@ -8,7 +8,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color:rgb(59, 7, 7);
+    background-color:rgb(59, 7, 7); 
 }
 .logo{
     color: rgb(255, 255, 255);
@@ -26,7 +26,7 @@ nav{
     list-style: none;
 }
 .nav-links a{
-    color: rgb(255, 255, 255);
+    color: rgb(253, 253, 253);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -38,9 +38,10 @@ nav{
 }
 .burger div{
     width: 25px;
-    height: 2px;
+    height: 3px;
     background-color:  rgb(255, 255, 255);
     margin: 5px;
+    transition: all 0.3s ease;
 }
 @media screen and (max-width:1024px){
    .nav-links{
@@ -76,11 +77,38 @@ nav{
 }
 @keyframes navLinkFade{
     from{
-            opacity: 0;
-            transform: translateX(50px);
+        opacity: 0;
+        transform: translateX(50px);
     }
     to{
         opacity: 1;
         transform: translateX(0px);
     }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/*parrallax effects here on after */
+.parallax{
+    /*image*/
+    background-image: url('../static/images/think.jpg');
+
+    /* has to fill up the entire view*/
+    min-height: 500px;
+    max-height: 40%;
+    width: auto;
+    height: auto;
+    /*creating the scrolling magic*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
 }
