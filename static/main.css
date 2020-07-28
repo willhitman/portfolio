@@ -1,7 +1,34 @@
+
+/* 
+MIT License
+
+Copyright (c) 2020 GIFT RUWENDE
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. */
+
+
+
 *{
     margin: 0px;
     padding:0px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 nav{
     display:flex;
@@ -20,12 +47,12 @@ nav{
     display: flex;
     justify-content: space-around;
     width: 40%;
-
 }
 .nav-links li{
     list-style: none;
 }
 .nav-links a{
+    
     color: rgb(253, 253, 253);
     text-decoration: none;
     letter-spacing: 3px;
@@ -52,7 +79,9 @@ nav{
     body{
         overflow-x: hidden;
     }
+   
    .nav-links{
+       z-index: 4;
        position: absolute;
        right: 0px;
        height:92vh;
@@ -62,6 +91,7 @@ nav{
        flex-direction: column;
        align-items: center;
        width: 50%;
+       overflow-x: hidden;
        transform: translateX(100%);
        transition: transform 0.5s ease-in;
    }
@@ -111,4 +141,30 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
+    object-position: center center;
+
+
+    
+}
+.header-text{
+    color: white;
+    padding: 4.5em 0;
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 5px 5px 10px white;
+}
+.header-motto{
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    color:white ;
+}
+.body{
+    background: linear-gradient(to top,rgb(248, 248, 248),rgb(37, 37, 37));
 }
