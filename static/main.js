@@ -64,7 +64,23 @@ function scrollAppear(){
     if(position<screenPosition){
         section1.classList.add('section-appear');
     } 
+    var secondPosition = window.innerHeight / 2;
+    if(position<secondPosition){
+        typingtext();
+    
+    }
 }
 
 //add listener pal
 window.addEventListener('scroll',scrollAppear);
+
+// text typing magic effect js is soo cool
+var i = 0, head;
+head = " Projects ";
+function typingtext(){
+    if(i<head.length){
+        document.querySelector('.heading').innerHTML += head.charAt(i);
+        i ++;
+        setTimeout(typingtext,200);
+    }
+}
