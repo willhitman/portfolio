@@ -213,3 +213,18 @@ nav{
     cursor: pointer;
     background-color: transparent ;
 }
+/* about me text animation constr */
+.section1{
+    opacity: 0;
+    transform: translateY(20px);
+    color: red;
+    transition: 1.0s all ease-in-out;
+    
+}
+.section-appear{
+    opacity: 1;
+ 
+    color: red;
+    color: black;
+    transform: translateY(0px);
+}

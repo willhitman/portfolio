@@ -54,3 +54,17 @@ const navSlide = () => {
 
 }
 navSlide(); 
+
+function scrollAppear(){
+    var section1 = document.querySelector('.section1');
+    //getting distance where the text is relative to the top of the display.
+    var position = section1.getBoundingClientRect().top;
+     
+    var screenPosition = window.innerHeight / 1.3;
+    if(position<screenPosition){
+        section1.classList.add('section-appear');
+    } 
+}
+
+//add listener pal
+window.addEventListener('scroll',scrollAppear);
