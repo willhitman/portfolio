@@ -60,7 +60,7 @@ function scrollAppear(){
     //getting distance where the text is relative to the top of the display.
     var position = section1.getBoundingClientRect().top;
      
-    var screenPosition = window.innerHeight / 1.3;
+    var screenPosition = window.innerHeight / 1.5;
     if(position<screenPosition){
         section1.classList.add('section-appear');
     } 
@@ -84,3 +84,35 @@ function typingtext(){
         setTimeout(typingtext,200);
     }
 }
+
+
+//hovereffect
+// (function(){
+//  const link = document.querySelectorAll('section > .hover_effect');
+//  const cursor = document.querySelector('.cursor');
+
+//  //animate 
+//  const animate = function (e){
+//      const span = this.querySelector('span');
+//      const {offsetX: x, offsetY: y} =e,
+//      {
+//          offsetWidth: width, offsetHeight: height} = this,
+//          move = 25,
+//          xMove = x/width * (move*2) - move,
+//          yMove = y/height * (move *2 ) - move;
+
+//          span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+//          if (e.type ==='mouseleave') span.style.transform = '';
+
+//      };
+
+
+//      const editCursor = e => {
+//          const {clientX:x, clientY:y} = e;
+//          cursor.style.left = x + 'px';
+//          cursor.style.top = y + 'px';
+//      };
+//      link.forEach(b=> b.addEventListener('mousemove',animate))
+//      link.forEach(b=> b.addEventListener('mouseleave',animate));
+//      window.addEventListener('mousemove', editCursor);
+// })(); 

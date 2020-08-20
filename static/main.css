@@ -126,6 +126,24 @@ nav{
 }
 
 /*parrallax effects here on after */
+.parallax::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    background-image: linear-gradient(to bottom, rgb(59, 7, 7),rgb(114, 44, 44),black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 0;
+    mix-blend-mode: color;
+}
+.parallax > * {
+    z-index: 2;
+    position: relative;
+}
 .parallax{
     /*image*/
     background-image: url('../static/images/think.jpg');
@@ -135,6 +153,7 @@ nav{
     max-height: 40%;
     width: auto;
     height: auto;
+    position: relative;
     /*creating the scrolling magic*/
     background-attachment: fixed;
     background-position: center;
@@ -142,10 +161,8 @@ nav{
     background-size: cover;
     object-fit: cover;
     object-position: center center;
-    z-index: 1;
-
-    
 }
+
 
 .header-text{
     color: white;
@@ -248,7 +265,9 @@ nav{
 .btn1:hover::before{
     height: 0%;
 }
-
+.section1-content{
+    margin-top: 9.8rem;
+}
 .section1{
     opacity: 0;
     transform: translateY(20px);
@@ -260,4 +279,49 @@ nav{
     color: red;
     color: black;
     transform: translateY(0px);
+}
+
+/* cards */
+.column{
+    float: left;
+    width: 60%;
+    padding: 10px 10px;
+}
+.row{
+    margin: 0 -5px;
+}
+/* clear  floats after the columns */
+.row:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 16px;
+    text-align: left;
+    background-color: #f1f1f1;
+}
+@media screen and (max-width:768px){
+    .column{
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+/* images */
+.avatar{
+    margin-top: 0.5rem;
+    margin-bottom: -12rem;
+    display: flex;
+   
+}
+.avatar-img{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    height: 11rem;
+    width: 11rem;
+    background-size: cover;
+    z-index: 6;
 }
