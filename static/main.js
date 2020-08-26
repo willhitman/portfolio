@@ -70,9 +70,26 @@ function scrollAppear(){
     
     }
 }
+function scrollAppearCards(){
+    var section1 = document.querySelector('.hide-card');
+    //getting distance where the text is relative to the top of the display.
+    var position = section1.getBoundingClientRect().top;
+     
+    var screenPosition = window.innerHeight / 1.5;
+    if(position<screenPosition){
+        section1.classList.add('show-card');
+    } 
+    var secondPosition = window.innerHeight / 2;
+    if(position<secondPosition){
+        typingtext();
+    
+    }
+}
+
 
 //add listener pal
 window.addEventListener('scroll',scrollAppear);
+window.addEventListener('scroll',scrollAppearCards);
 
 // text typing magic effect js is soo cool
 var i = 0, head;
