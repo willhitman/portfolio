@@ -35,6 +35,11 @@ SOFTWARE. */
 ::after{
     box-sizing: border-box;
 }
+/* so for mobile view the overflow x wasnt working had to wrap all the content in a div because mobile browsers ignore thaat when place in the header or body or head */
+.wrapper{
+    overflow-x: hidden;
+    position: relative;
+}
 nav{
     display:flex;
     justify-content: space-around;
@@ -80,6 +85,7 @@ nav{
       width: 60%;
    }
 }
+
 @media screen and (max-width:768px){
     body{
         overflow-x: hidden;
@@ -305,7 +311,6 @@ nav{
     padding: 2rem;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2);
-    padding: 16px;
     text-align: left;
     color: white;
     background-color: rgb(255, 225, 225);
@@ -332,6 +337,23 @@ nav{
     transform: scaleX(0.2);
     transform-origin: left;
     transition: transform 250ms ease-in;
+}
+.card-body{
+    position: relative;
+    margin: 0;
+    z-index: 1;
+}
+.card-body::after{
+    content: '';
+    margin: 0;
+    position: absolute;
+    top: -1.75rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: -1;
+
 }
 .card:hover .card-title::after{
     transform: scaleX(1);   
