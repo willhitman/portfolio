@@ -44,7 +44,7 @@ nav{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 8vh; 
     background-color:rgb(59, 7, 7); 
 }
 .logo{
@@ -52,6 +52,7 @@ nav{
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 30px;
+    width: 30%;
 }
 .nav-links{
     display: flex;
@@ -85,7 +86,6 @@ nav{
       width: 60%;
    }
 }
-
 @media screen and (max-width:768px){
     body{
         overflow-x: hidden;
@@ -153,7 +153,7 @@ nav{
     mix-blend-mode: color;
 }
 .parallax > * {
-    z-index: 2;
+    z-index: 1;
     position: relative;
 }
 .parallax{
