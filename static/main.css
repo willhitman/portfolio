@@ -35,25 +35,20 @@ SOFTWARE. */
     box-sizing: border-box;
 }
 /* so for mobile view the overflow x wasnt working had to wrap all the content in a div because mobile browsers ignore thaat when place in the header or body or head */
-.wrapper{
-    overflow-x: hidden;
-    position: relative;
-    overflow-y: hidden;
-}
 nav{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh; 
     background-color:rgb(59, 7, 7); 
 }
 .logo{
+    overflow: hidden;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 30px;
-    width: 30%;
 } 
+
 .nav-links{
    display: flex;
     justify-content: space-around;
@@ -92,7 +87,7 @@ nav{
     }
    
    .nav-links{
-       z-index: 3;
+       z-index: 1;
        position: absolute;
        right: 0px;
        height:92vh;
@@ -153,7 +148,7 @@ nav{
     mix-blend-mode: color;
 }
 .parallax > * {
-    z-index: 1;
+    z-index: 0;
     position: relative;
 }
 .parallax{
